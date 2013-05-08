@@ -86,7 +86,7 @@ color: #1baaf0;
 .block-type-header .tagline {
 margin: 20px;
 color: #bfbfbf;
-font-weight: 200;
+font-weight: 100;
 letter-spacing: .1em;
 }
 
@@ -109,7 +109,7 @@ margin-top: 0px;
 
 .block-type-navigation ul li {
 text-transform: uppercase;
-font-weight: 200;
+font-weight: 100;
 font-size: 1.5em;
 letter-spacing: .1em;
 margin: 0 13px;
@@ -257,7 +257,7 @@ margin-top: 20px;
 
 .widget-about .bio h1 {
 font-size: 1.2em;
-font-weight: 200;
+font-weight: 100;
 line-height: 1.4em;
 color: #f5f8fa;
 margin-bottom: 10px;
@@ -301,7 +301,7 @@ box-shadow:  inset 0 5px 6px -6px rgba(0, 0, 0, 0.8);
 
 .widget-about .contact p {
 font-size: .5em;
-font-weight: 200;
+font-weight: 100;
 line-height: 1.4em;
 letter-spacing: .1em;
 color: #282b2d;
@@ -389,22 +389,60 @@ color: #3f3f3f;
 box-shadow:  inset 0 5px 6px -6px rgba(0, 0, 0, 0.8);
 }
 
-.home .article .categories-wrap {
+/*.home .article .categories-wrap {
 background: skyblue;
 position: absolute;
 top: 60px;
 width: 100px;
 height: 50px;
-}
+}*/
 
+.home .article .categories-wrap {
+/* Hide Text to show Icon*/
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+font-size: 0px;
+}
+  
 .category-plan .categories-wrap {
 background-color: red;
  }
- 
-.category-launch .categories-wrap {
-background-color: blue;
- }
 
+.post-meta.categories.launch {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_Launch.png") no-repeat top left;
+height: 60px;
+width: 90px;
+position: absolute;
+top: 60px;
+left: -1px;
+}
+
+.post-meta.categories.plan {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_plan.png") no-repeat top left;
+height: 60px;
+width: 90px;
+position: absolute;
+top: 60px;
+left: -1px;
+}
+
+.post-meta.categories.grow {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_grow.png") no-repeat top left;
+height: 60px;
+width: 90px;
+position: absolute;
+top: 60px;
+left: -1px;
+}
+
+.articles article figure a.post-thumbnail span.spotlight-animate {
+background-color: #e9e9e9;
+zoom: 1;
+filter: alpha(opacity=80);
+opacity: 0.8;
+}
+ 
 
 
 /****************************************************************************************/
