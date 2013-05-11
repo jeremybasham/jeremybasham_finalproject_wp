@@ -6,20 +6,6 @@
 //function my_action() {echo 'Testing function output';}
 //add_action('headway_after_block_38', 'my_action');
 
-// Add Footer
-/*add_action('headway_after_block_38', 'add_footer');
-function add_footer() {
-
-    echo '<div class="footer-container">';
-    echo'<div class="footer">'; 
-
-     echo'<p class="copyright">Copyright &copy; ';the_date('Y');
-     echo' ';bloginfo('name');
-     echo' | Site designed by <a href="http://jeremybasham.com">Jeremy Basham</a></p>';
-
-    echo '</div></div>'; 
-} */
-
 // Remove default headway styling and design editor
 add_action('headway_setup_child_theme', 'churchhype_child_setup');
 function churchhype_child_setup() {
@@ -27,7 +13,6 @@ function churchhype_child_setup() {
     remove_theme_support('headway-structure-css');
 }
 ?>
- 
 <?php
 // Add new meta tags and place above title *******************************************
 function new_meta() { ?>
@@ -42,14 +27,7 @@ function new_meta() { ?>
                     <p><span class="highlight-tag">Tags:</span> <?php the_tags( ' ') ?></p>
           </div>
 </div>
-
 <?php
 } add_action('headway_before_entry_title', 'new_meta');
 //************************************************************************************
 ?>
-
-
-
-
-
-

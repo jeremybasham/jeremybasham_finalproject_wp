@@ -43,8 +43,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 
 body {
-background: url(images/header-bg.png) repeat-x #282b2d;
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+background-image: url(images/header-bg.png), url(images/tactile_noise.png);
+background-repeat: repeat-x, repeat;
+background-position: left top, left top ;
+font-family: 'Helvetica Neue Light','Helvetica Neue', Helvetica, Arial, sans-serif;
 font-size: 1em;
 line-height: 1.3em;
 } 
@@ -68,7 +70,8 @@ color: #1baaf0;
 
 .block-type-header .banner {
 font-size: 4em; 
-font-family:'Oleo Script', cursive;
+font-family:'Oleo Script';
+letter-spacing: .04em;
 text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 margin-top: 30px;
 margin-bottom: 20px;
@@ -85,11 +88,47 @@ color: #1baaf0;
 
 .block-type-header .tagline {
 margin: 20px;
-color: #bfbfbf;
+color: #23d150;
 font-weight: 100;
 letter-spacing: .1em;
 }
 
+.block-type-header {
+    -webkit-transition-property: color; 
+    -webkit-transition-duration: 1s, 1s; 
+    -webkit-transition-timing-function: linear, ease-in;
+}
+
+.block-type-header a{
+-webkit-transition-property:color; 
+-webkit-transition-duration: 1s, 1s; 
+-webkit-transition-timing-function: linear, ease-in;
+}
+
+
+
+/* effects link once mouse hovers anywhere in div */
+/*
+.block-type-header:hover a {
+    color: #23d150;
+}
+*/
+
+.block-type-header .tagline {
+    -webkit-transition-property: color; 
+    -webkit-transition-duration: 1s, 1s; 
+    -webkit-transition-timing-function: linear, ease-in;
+}
+
+.block-type-header.tagline a{
+-webkit-transition-property:color; 
+-webkit-transition-duration: 1s, 1s; 
+-webkit-transition-timing-function: linear, ease-in;
+}
+
+.block-type-header .tagline:hover {
+    color: #def01b;
+}
 
 /****************************************************************************************/
 
@@ -113,16 +152,20 @@ font-weight: 100;
 font-size: 1.5em;
 letter-spacing: .1em;
 margin: 0 13px;
+    -webkit-transition-property: color; 
+    -webkit-transition-duration: 1s, 1s; 
+    -webkit-transition-timing-function: linear, ease-in;
 }
 
 .block-type-navigation ul li a {
 padding: 0; /*overrides default padding*/
 color: #f5f8fa; 
+-webkit-transition-property:color; 
+-webkit-transition-duration: 1s, 1s; 
+-webkit-transition-timing-function: linear, ease-in;
 }
 
-.block-type-navigation ul li a:hover{
-color: #bbb;
-}
+
 
 .block-type-navigation ul li a:active{
 }
@@ -132,12 +175,24 @@ color: #bbb;
 border-bottom: solid 2px #1baaf0;
 }
 
+.menu-item-15 a:hover {
+color: #1baaf0;
+}
+
 .menu-item-16 {
 border-bottom: solid 2px #23d150;
 }
 
+.menu-item-16 a:hover {
+color: #23d150;
+}
+
 .menu-item-17 {
 border-bottom: solid 2px #def01b;
+}
+
+.menu-item-17 a:hover{
+color: #def01b;
 }
 
 
@@ -237,6 +292,30 @@ border-top: solid 2px #ccc;
 padding-top: 40px;
 }
 
+.widget-area {
+color: #bfbfbf;
+}
+
+.widget-title {
+font-size: 1.5em;
+font-weight: 100;
+letter-spacing: .1em;
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea, select {
+border: 2px solid #0a0a0a;
+padding: 8px;
+outline: none;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+color: #c9c9c9;
+display: inline-block;
+background: #151515;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
 
 /****************************************************************************************/
 
@@ -257,7 +336,7 @@ margin-top: 20px;
 
 .widget-about .bio h1 {
 font-size: 1.2em;
-font-weight: 100;
+font-weight: 200;
 line-height: 1.4em;
 color: #f5f8fa;
 margin-bottom: 10px;
@@ -265,9 +344,9 @@ letter-spacing: .04em;
 }
 
 .widget-about .bio p {
-font-size: .8em;
+font-size: .9em;
 font-weight: 100;
-line-height: 1.4em;
+line-height: 1.2em;
 letter-spacing: .1em;
 color: #f5f8fa;
 }
@@ -301,7 +380,7 @@ box-shadow:  inset 0 5px 6px -6px rgba(0, 0, 0, 0.8);
 
 .widget-about .contact p {
 font-size: .5em;
-font-weight: 100;
+font-weight: 400;
 line-height: 1.4em;
 letter-spacing: .1em;
 color: #282b2d;
@@ -437,10 +516,10 @@ left: -1px;
 }
 
 .articles article figure a.post-thumbnail span.spotlight-animate {
-background-color: #e9e9e9;
+background-color: #000;
 zoom: 1;
-filter: alpha(opacity=80);
-opacity: 0.8;
+filter: alpha(opacity=90);
+opacity: 0.9;
 }
  
 
@@ -548,6 +627,21 @@ color: #def01b;
 text-transform: uppercase;
 }
 
+/****************************************************************************************/
+
+
+/************************/
+/*  SEARCH RESULTS PAGE */
+/************************/
+
+.search-results .articles img {
+border: solid 10px #f5f8fa; 
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+-moz-border-top-left-radius: 7px;
+-webkit-border-top-right-radius: 7px;
+}
+
 
 /****************************************************************************************/
 
@@ -557,30 +651,65 @@ text-transform: uppercase;
 
 .meta-container {
 width: 100%;
-padding-top: 2%;
+padding-top: 1.4%;
 height: 70px;
 background-color: #f5f8fa;
 }
 
 .meta-category {
 float: left;
-width: 20%;
-background-color: skyblue;
+width: 10%;
 padding: 1% 0 1% 0;
 }
+
+.category-grow .meta-category {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_grow.png") no-repeat top left;
+width: 14%;
+height: 50px;
+padding: 1% 0 1% 0;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+font-size: 0px;
+}
+
+.category-launch .meta-category {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_launch.png") no-repeat top left;
+width: 14%;
+height: 50px;
+padding: 1% 0 1% 0;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+font-size: 0px;
+}
+
+.category-plan .meta-category {
+background: url("http://localhost:8888/jeremybasham_finalproject_wp/wordpress/wp-content/uploads/icon_plan.png") no-repeat top left;
+width: 14%;
+height: 50px;
+padding: 1% 0 1% 0;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+font-size: 0px;
+}
+
+
 
 .date-time {
 float: left;
 width: 20%;
 margin-left: 3%;
 font-size: 1.2em;
-padding-top: 1%;
+padding-top: 2%;
 color: #3f3f3f;
 }
 
 .meta-tags {
 float: right;
 width: 40%;
+padding-top: 1%;
 }
 
 .highlight-tag {
@@ -660,6 +789,7 @@ color: #1baaf0;
 
 /****************************************************************************************/
 
-#category-launch {
-background-color: red;
+#comment {
+background-color: #e9e9e9;
+border: none;
 }
